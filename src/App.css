@@ -1,0 +1,615 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  --marineblue: hsl(213, 96%, 18%);
+  --purpleblue: hsl(243, 100%, 62%);
+  --pastelblue: hsl(228, 100%, 84%);
+  --lightblue: hsl(206, 94%, 87%);
+  --strawberryred: hsl(354, 84%, 57%);
+  --coolgray: hsl(231, 11%, 63%);
+  --lightgray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+  --mainfont: "Ubuntu", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.parent-app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--magnolia);
+}
+
+.app {
+  max-width: 94rem;
+  width: 70%;
+  min-width: 74rem;
+  height: 60rem;
+  /* border: 2px dotted red; */
+  margin: 0 auto;
+  padding: 1.9rem;
+  border-radius: 8px;
+  box-shadow: 2px 3px 25px lightgray;
+  position: relative;
+  /* background: var(--magnolia); */
+  font-family: var(--mainfont);
+  background: var(--white);
+}
+
+/*------------------------------------------------/*
+/*FORM-STEPS */
+
+.form-steps-parent {
+  width: 27.4rem;
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  /* border: 3px dotted purple; */
+}
+
+.bg-img {
+  /* height: 100%; */
+  position: absolute;
+}
+
+.steps {
+  height: 22.8rem;
+  /* width:15.3rem // Figma Spec */
+  width: 18.3rem;
+  position: absolute;
+  /* border: 2px dotted white; */
+  left: 3.2rem;
+  top: 4rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.step-item {
+  display: flex;
+  height: 3.3rem;
+  /* width: 100%; */
+  /* border: 3px dotted red; */
+}
+
+.step-number-div {
+  width: 3.3rem;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-num {
+  font-size: 1.4rem;
+}
+
+.step-num-info {
+  margin-left: 1.6rem;
+  text-transform: uppercase;
+  /* border: 2px dotted purple; */
+}
+
+.step-h5 {
+  color: var(--lightblue);
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.step-name-h4 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.highlight {
+  background: var(--lightblue);
+  color: var(--marineblue);
+}
+
+/*------------------------------------------------/*
+/*NextStep*/
+
+.nextstep-div {
+  position: absolute;
+  /* bottom: 3.2rem;
+  right: 10rem; */
+  bottom: 6%;
+  right: 11%;
+  width: 48%;
+  /* border: 3px dotted pink; */
+  height: 4.8rem;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.hide-btn-row {
+  display: none;
+}
+
+.next-btn,
+.back-btn {
+  width: 12.3rem;
+  height: 4.8rem;
+  background: var(--marineblue);
+  color: var(--white);
+  transition: 0.2s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+}
+
+.back-btn {
+  background: transparent;
+  left: 0;
+  color: var(--marineblue);
+}
+
+.hide-btn {
+  display: none;
+}
+
+.next-btn:hover {
+  opacity: 75%;
+}
+
+/*------------------------------------------------/*
+/*Form Parent */
+
+.form-parent {
+  width: 45rem;
+  width: 48%;
+  height: 37.2rem;
+  /* border: 4px dotted palevioletred; */
+  position: absolute;
+  top: 5.6rem;
+  right: 10rem;
+  top: 9%;
+  right: 11%;
+  background: var(--white);
+  border-radius: 8px;
+  /* box-shadow: 2px 3px 10px lightgray; */
+  padding: 3.2rem 2.4rem;
+}
+
+.form-h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.1rem;
+}
+
+.form-h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--lightgray);
+  margin-bottom: 3rem;
+}
+
+/*------------------------------------------------/*
+/*PersonalInfo */
+
+.form-div {
+  height: 7.5rem;
+  /* border: 2px dotted blue; */
+  margin-bottom: 1.6rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.error-h5,
+label {
+  font-size: 1.4rem;
+}
+
+.error-h5 {
+  color: var(--strawberryred);
+  font-weight: 700;
+  transition: 0.5s ease;
+  transform: translateX(0vw);
+}
+.hide-error {
+  transform: translateX(100vw);
+}
+
+.form-control {
+  width: 100%;
+  height: 4.8rem;
+  padding-left: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--lightgray);
+  font-weight: 700;
+}
+
+.form-control:active {
+  border: 2px solid var(--purpleblue);
+}
+
+/*------------------------------------------------/*
+/*SelectPlans  */
+
+.plans-list {
+  display: flex;
+}
+
+.plan-card {
+  height: 16rem;
+  width: 13.8rem;
+  border-radius: 8px;
+  border: 2px solid var(--lightgray);
+  margin-right: 1.8rem;
+  padding: 2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.plan-card:active {
+  border: 2px solid var(--purpleblue);
+  background: var(--alabaster);
+}
+
+.highlight-plan {
+  border: 2px solid var(--purpleblue);
+  background: var(--alabaster);
+}
+
+.plan-h4 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.plan-h5-fee {
+  font-size: 1.3rem;
+  color: var(--lightgray);
+  font-weight: 400;
+}
+
+.plans-toggle-parent {
+  width: 100%;
+  background: var(--magnolia);
+  display: Flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.2rem;
+  border-radius: 8px;
+  height: 4.8rem;
+}
+
+.plans-toggle-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 18.3rem;
+}
+
+.toggle-input {
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-input::after {
+  width: 3.8rem;
+  background: var(--purpleblue);
+  position: absolute;
+  content: "";
+  height: 2rem;
+  border-radius: 100px;
+  left: -1.2rem;
+  top: -0.25rem;
+}
+
+.toggle-input::before {
+  width: 1.2rem;
+  height: 1.2rem;
+  z-index: 5;
+  background: var(--white);
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  left: -0.75rem;
+  top: 0.15rem;
+  transition: 0.3s ease;
+}
+
+.toggle-input:checked::before {
+  left: 1rem;
+}
+
+.plan-value {
+  font-size: 1.6rem;
+  color: var(--coolgray);
+  font-weight: 400;
+}
+
+.bold {
+  color: var(--marineblue);
+  font-weight: 600;
+}
+
+/*------------------------------------------------/*
+/*Add-Ons */
+.add-on-item {
+  height: 8.1rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--lightgray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  margin-bottom: 1.6rem;
+}
+
+.highlight-item {
+  background: var(--magnolia);
+  border: 2px solid var(--purpleblue);
+}
+
+.purple {
+  color: var(--purpleblue);
+}
+
+.checkbox-div {
+  /* margin: 0 2.4rem; */
+  /* margin: 0 6%; */
+}
+
+.addon-input {
+  height: 2rem;
+  width: 2rem;
+}
+
+.addon-input:enabled:checked {
+  accent-color: var(--purpleblue);
+}
+
+.add-on-info-div {
+  margin-left: 1.5rem;
+}
+
+.add-on-h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.add-on-h5 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--lightgray);
+}
+
+.add-on-info-div {
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.fee-h5 {
+  font-size: 1.4rem;
+}
+
+.purple {
+  color: var(--purpleblue);
+}
+
+/*------------------------------------------------/*
+/* FINISHING */
+
+.checkout-form {
+  background: var(--magnolia);
+  padding: 1.6rem 2.4rem;
+  border-radius: 8px;
+}
+
+.checkout-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.finishing-fee-h5 {
+  font-size: 1.4rem;
+  color: var(--marineblue);
+}
+
+.checkout-h5 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #022959;
+}
+
+.checkout-final {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finishing-h5 {
+  font-size: 1.4rem;
+  color: #9699aa;
+  font-weight: 400;
+}
+
+.finishing-h3 {
+  font-size: 1.8rem;
+  color: var(--purpleblue);
+}
+
+/*------------------------------------------------/*
+/*THANKYOU */
+
+.thankyou-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.thanks-icon {
+  height: 5.6rem;
+  width: 5.6rem;
+  margin-top: 7.9rem;
+  margin-bottom: 2.4rem;
+}
+
+.thanks-h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.thanks-caption {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: var(--lightgray);
+  text-align: center;
+}
+
+/*------------------------------------------------/*
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  .app {
+    min-width: 65rem;
+    padding: 1rem;
+    overflow-x: hidden;
+  }
+
+  .form-steps-parent {
+    width: 22rem;
+  }
+
+  .steps {
+    left: 1rem;
+    top: 2rem;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .app {
+    min-width: fit-content;
+    width: 100%;
+    height: 100vh;
+    min-height: 75rem;
+    padding: 0;
+    background: var(--magnolia);
+  }
+
+  .form-steps-parent {
+    width: 100%;
+    height: 17.2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .bg-img {
+    /* width: 100%; */
+    /* position: absolute;
+    top: 0; */
+    left: 0;
+  }
+
+  .steps {
+    position: initial;
+    display: flex;
+    width: 18rem;
+    height: 3.3rem;
+    z-index: 5;
+    flex-direction: row;
+    margin-top: 3.2rem;
+  }
+
+  .step-num-info {
+    display: none;
+  }
+
+  .form-parent {
+    width: 95%;
+    right: 1rem;
+    top: 10rem;
+    height: auto;
+    box-shadow: 2px 3px 15px lightgray;
+  }
+
+  .plans-list {
+    flex-direction: column;
+  }
+
+  .plan-card {
+    width: 100%;
+    height: 7.7rem;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 1.6rem;
+  }
+
+  .plan-info {
+    margin-left: 1.6rem;
+  }
+
+  .nextstep-div {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7.2rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .next-btn {
+    width: 9.7rem;
+    position: relative;
+    margin-right: 1rem;
+  }
+}
